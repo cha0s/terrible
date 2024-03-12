@@ -1,0 +1,54 @@
+.description {
+  font-family: Smack;
+  font-size: 8vw;
+  @media(min-width: 64em) {
+    font-size: 80px;
+  }
+  height: 20%;
+}
+
+.destination {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.game-key {
+  color: #d68030;
+  display: inline-table;
+  letter-spacing: 1vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22vw;
+  @media(min-width: 80em) {
+    font-size: 15vw;
+  }
+  text-shadow:
+    -1px 0 1px #111,
+    1px 0 1px #111,
+    0 1px 1px #111,
+    0 -1px 1px #111,
+    1px 1px 3px #000
+  ;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 4vh 4vw;
+  text-align: center;
+  width: 100%;
+
+  .message {
+    color: #666;
+    height: 30%;
+  }
+
+  .title {
+    height: 30%;
+  }
+}

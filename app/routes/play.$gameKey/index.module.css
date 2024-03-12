@@ -1,0 +1,49 @@
+.play {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.black-and-white {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  @media(min-width: 80em) {
+    width: 60vw;
+  }
+  height: 100vh;
+}
+
+.black-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+
+.black {
+  background-color: #151515;
+  color: #b1b1b1;
+  display: flex;
+  flex-basis: calc(100% - 6rem);
+  overflow: hidden;
+  padding: 4vh 4vw;
+  position: relative;
+}
+
+.white-wrapper {
+  height: 50%;
+  overflow: auto;
+}
+
+.white {
+  background-color: #dfdfdf;
+  color: #151515;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.no-cookie {
+  padding: 4vh 8vw;
+}

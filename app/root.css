@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  box-shadow: 0 0 2px 0 #d68030ff;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  --default-font: Shark, 'Times New Roman', Times, serif;
+  font-family: var(--default-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: thin;
+  scrollbar-color: #777 #333;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #333;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 20px;
+  border: 3px solid #333;
+}
+
+button {
+  font-family: var(--default-font);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html, body, #root {
+  background-color: #111111;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: none;
+}
+
+fieldset {
+  background-color: #151515;
+  border: 1px solid #000000;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  top: -0.5em;
+  width: 100%;
+}
+
+form {
+  line-height: 0;
+}
+
+button,
+input[type="checkbox"],
+input[type="checkbox"] + label {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+fieldset {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+label {
+  color: #ffffff;
+  font-family: var(--default-font);
+  font-size: 1em;
+  text-transform: uppercase;
+  user-select: none;
+  white-space: nowrap;
+}
+
+select {
+  background: #222222;
+  border: 1px solid #000000;
+  color: #ffffff;
+  font-size: 1em;
+  line-height: 0.75em;
+  margin: 0 1em;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding: 0.5em;
+}
+
+:global {
+  @font-face {
+    font-family: "Caladea";
+    src: url("./fonts/caladea.woff") format("woff");
+  }
+}

@@ -1,0 +1,39 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.answers {
+  height: 85%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.padded {
+  height: 100%;
+  padding: 4vh 4vw;
+}
+
+.title {
+  color: #555;
+  font-family: Smack;
+  font-size: 2.25vw;
+  height: 15%;
+  padding: 0.25em;
+  text-align: center;
+  &.bigger {
+    height: 50%;
+  }
+}
+
+.name {
+  color: #d68030;
+  font-family: Strike;
+}
+
+.normal {
+  color: #888;
+  font-family: Shark;
+}

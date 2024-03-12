@@ -1,0 +1,144 @@
+.bar-wrapper {
+  height: 6rem;
+  width: 100%;
+}
+
+.bar {
+  align-items: center;
+  background-color: #111;
+  display: flex;
+  height: 100%;
+  left: 0;
+  justify-content: space-between;
+  text-align: center;
+  top: 0;
+}
+
+
+button.chat, button.mute {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+button.chat {
+  position: relative;
+  @media(min-width: 80em) {
+    display: none;
+  }
+
+  svg .lines {
+    opacity: 0.5;
+  }
+
+  &.unread svg {
+    animation: chat-wiggle 7s infinite;
+    & .lines {
+      animation: fluoresce 7s infinite;
+    }
+  }
+
+  .unread {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    color: white;
+    border-radius: 0.5rem;
+    background-color: #880000;
+    font-size: 100%;
+    padding: 0.25rem 0.25rem;
+    right: 1rem;
+    top: 2.5rem;
+  }
+}
+
+button.mute {
+  transition: opacity 0.5s;
+  svg {
+    opacity: 0.7;
+  }
+  &.muted {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+@keyframes chat-wiggle {
+  from { transform: rotate(25deg) scale(1); }
+  2% { transform: rotate(-12deg) scale(1.15); }
+  4% { transform: rotate(12deg); }
+  4.2% { transform: rotate(0deg); }
+  4.4% { transform: rotate(6deg); }
+  4.6% { transform: rotate(-3deg) scale(1); }
+  4.7% { transform: rotate(0deg) scale(1); }
+  4.75% { transform: rotate(1.5deg) scale(1); }
+  4.8% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes fluoresce {
+  from  { opacity: 0.5; }
+  4.8%  { opacity: 1.0; }
+  to  { opacity: 0.5; }
+}
+
+.mute .line {
+  transition: opacity 0.4s;
+}
+
+.mute.muted .line {
+  opacity: 1;
+}
+
+.mute:not(.muted) .line {
+  opacity: 0;
+}
+
+.mute path, .mute polygon {
+  fill: #999999;
+}
+
+.mute .wave {
+  transition: fill 0.4s;
+}
+
+.mute rect, .mute:not(.muted) .wave {
+  fill: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  line-height: 0;
+  form {
+    display: inline-block;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+
+    .icon {
+      align-items: center;
+      background-color: #111;
+      display: flex;
+      fill: #fff;
+      justify-content: center;
+      margin: 1rem;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+
+.iframe {
+  border: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 10em;
+}
+
+.rendered, .streaming {
+  --nothing: 0;
+}

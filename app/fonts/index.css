@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Shark";
+  src: url("./flashrogers.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Smack";
+  src: url("./flashrogerspunch.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Strike";
+  src: url("./flashrogershalf.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Line";
+  src: url("./flashrogerschrome.ttf") format("truetype");
+}

@@ -1,0 +1,157 @@
+.players-list {
+  background-color: #262626;
+  box-shadow: 0 4px 4px -6px black;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow-y: auto;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.player {
+  background-color: #171717;
+  border-radius: 5px;
+  color: hsl(0, 0%, 67%);
+  display: inline-block;
+  font-family: var(--default-font);
+  font-size: 150%;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5em;
+  white-space: nowrap;
+}
+
+.player form {
+  display: inline-block;
+}
+
+.player button {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+
+  &[name="cancel"] {
+    font-size: 0.7em;
+    margin: 0 6px 0 -6px;
+    opacity: 0.4;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &[name="action"] {
+    color: #d68030;
+    font-family: Strike;
+    margin-left: -6px;
+    &:hover {
+      color: #d69d67;
+    }
+  }
+  &.hydrated {
+    display: none;
+  }
+}
+
+.player.czar {
+  background-color: #b1b1b1;
+  color: #1c1c1c;
+  display: block;
+  font-size: 200%;
+  margin: 0 0 0.5rem 0;
+  top: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.player.czar .spinny {
+  animation: spinny 5s infinite;
+  display: inline-block;
+}
+
+@keyframes spinny {
+  from { transform: rotate(0deg);   }
+  25%  { transform: rotate(0deg);   }
+  50%  { transform: rotate(180deg); }
+  75%  { transform: rotate(180deg); }
+  to   { transform: rotate(0deg);   }
+}
+
+.player.owner::before {
+  content: '👑 ';
+}
+
+.player.czar .score {
+  color: #888;
+  font-size: 80%;
+  .number {
+    text-shadow:
+      -1px 0px 0px #444,
+      1px 0px 0px #444,
+      0px -1px 0px #444,
+      0px 1px 0px #444
+    ;
+  }
+}
+
+.player .name {
+  margin-right: 6px;
+}
+
+.player.czar .name {
+  &::after {
+    color: #000;
+    content: ' (terrible)';
+    font-size: 80%;
+  }
+}
+
+.player.self .name {
+  cursor: pointer;
+}
+
+.player.self .score {
+  &::before {
+    color: #fff;
+    content: '(you) ';
+    font-size: 80%;
+    margin-left: -6px;
+  }
+}
+
+.player.self.czar .name {
+  &::after {
+    color: #000;
+  }
+}
+
+.player.blurred .name {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.player input {
+  background: #333;
+  color: #ffffff;
+  margin-right: 6px;
+  padding-block: 1px;
+  padding-inline: 6px;
+  font-family: var(--default-font);
+  font-size: 100%;
+}
+
+.player .score {
+  color: #555;
+  font-size: 100%;
+  .number {
+    color: #d68030;
+    font-style: italic;
+    font-family: Caladea, 'Times New Roman', Times, serif;
+  }
+}
+
+.rendered, .streaming {
+  --nothing: 0;
+}
+
+.hidden {
+  display: none;
+}

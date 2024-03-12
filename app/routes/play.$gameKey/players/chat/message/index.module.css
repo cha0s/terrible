@@ -1,0 +1,84 @@
+.message {
+  color: #aaa;
+  padding: 0.125rem 1.75rem;
+}
+
+.message, .message * {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.message:first-child {
+  margin-top: 0;
+}
+
+.message.short {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.message.short .time {
+  display: inline;
+  font-size: 75%;
+  visibility: hidden;
+}
+
+.message.short:hover .time {
+  visibility: visible;
+}
+
+.message.short header .owner {
+  display: none;
+}
+
+.message:hover {
+  background-color: #1c1c1c;
+}
+
+.message header {
+  display: flex;
+  width: 100%;
+}
+
+.message .owner {
+  color: #d68030aa;
+  font-family: Caladea, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 0.125em;
+  font-size: 200%;
+}
+
+.message .time {
+  color: #666;
+  font-size: 150%;
+  margin-left: 0.5em;
+}
+
+.message header .time {
+  line-height: 1.75;
+}
+
+.message .text {
+  font-size: 200%;
+}
+
+.message .text .markdown * {
+  margin: 0;
+}
+
+.message .text .markdown {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1em;
+  }
+}
+
+.message .text .markdown {
+  display: inline;
+}
+
+.message .text .markdown :first-child {
+  margin-top: 0;
+}
+
+.message .text .markdown :last-child {
+  display: inline;
+}

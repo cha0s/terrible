@@ -1,0 +1,39 @@
+.game {
+  color: #999;
+  display: block;
+  margin: 1em;
+  max-width: 20em;
+  background-color: rgba(12, 12, 12, 0.8);
+  border: 1px solid #444;
+  padding: 1em;
+  text-decoration: none;
+  &:hover {
+    background-color: rgba(24, 24, 24, 0.9);
+  }
+}
+
+.game .stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.game .stats .ish {
+  font-size: 0.7em;
+  padding: 0;
+}
+
+.game h2 {
+  font-family: Consolas, monospace;
+  margin: 0.5em 0 1em;
+}
+
+.number {
+  color: #d68030;
+  font-family: Caladea, 'Times New Roman', Times, serif;
+}
+
+.spacer {
+  margin: 0 0.5rem;
+}

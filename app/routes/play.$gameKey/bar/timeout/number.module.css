@@ -1,0 +1,7 @@
+.characteristic, .rendered, .streamed {
+  --nothing: 0;
+}
+
+.mantissa {
+  font-size: 0.4em;
+}

@@ -1,0 +1,13 @@
+.fluidText {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.resize {
+  display: inline-block;
+}

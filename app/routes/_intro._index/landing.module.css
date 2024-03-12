@@ -1,0 +1,131 @@
+.landing {
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 8vh 8vw 4vh;
+  width: 100%;
+}
+
+.doSide {
+  font-size: 0.5em;
+}
+
+.terribleSide {
+  color: #d68030;
+  font-family: Strike;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  font-family: Line;
+  text-align: center;
+  div {
+    display: inline-block;
+    line-height: 1;
+    font-size: 18vw;
+    @media(min-width: 50em) {
+      font-size: 145px;
+    }
+    @media(max-height: 55rem) {
+      font-size: 13vh;
+    }
+    text-shadow:
+      0.125vw 0 0 black,
+      0 0.125vw 0 black,
+      -0.125vw 0 0 black,
+      0 -0.125vw 0 black,
+      0 0 30px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 7px #000,
+      0 0 30px #000,
+      0 0 30px #000
+    ;
+  }
+  transform: translateY(-20px) scaleY(1.2) perspective(100px) rotateX(25deg) translateZ(-0.5vw);
+}
+
+.buttons {
+  align-items: center;
+  background: inherit;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons a {
+  background: inherit;
+  color: #aaa;
+  max-width: 70vw;
+  overflow: hidden;
+  padding: 2vh 8vw;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  &:first-child {
+    flex-basis: 55%;
+  }
+  &:nth-child(2) {
+    flex-basis: 35%;
+  }
+  &:before {
+    content: ' ';
+    background: inherit;
+    position: absolute;
+    left: -4vw;
+    right: 0;
+    top: -4vh;
+    height: calc(100% + 8vh);
+    width: calc(100% + 8vw);
+    bottom: 0;
+    filter: blur(0.025em) brightness(0.4);
+    transition: 0.4s filter;
+  }
+  &:hover {
+    &:before {
+      filter: blur(0.25em) brightness(0.6);
+    }
+    text-shadow: 0 0 5em #ffff0022;
+    color: #ff0;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.createButton {
+  font-size: 10vw;
+  @media(min-width: 50em) {
+    font-size: 6vw;
+  }
+}
+
+.joinButton {
+  font-size: 8vw;
+  @media(min-width: 50em) {
+    font-size: 4vw;
+  }
+}
+

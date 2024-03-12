@@ -1,0 +1,49 @@
+{
+  "name": "terrible",
+  "private": true,
+  "sideEffects": true,
+  "type": "module",
+  "scripts": {
+    "build": "remix vite:build",
+    "dev": "node ./server.js",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "cross-env NODE_ENV=production node ./server.js",
+    "test": "mocha app/**/*.test.js"
+  },
+  "dependencies": {
+    "@remix-run/express": "^2.7.2",
+    "@remix-run/node": "^2.7.2",
+    "@remix-run/react": "^2.7.2",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "isbot": "^4.1.0",
+    "morgan": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "react-redux": "^9.1.0",
+    "react-scrollable-feed": "^2.0.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.7.2",
+    "chai": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.38.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "mocha": "^10.3.0",
+    "vite": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "imports": {
+    "#*": "./app/*.js",
+    "#answers": "./app/answers/index.jsx",
+    "#black-card-text": "./app/black-card-text/index.jsx",
+    "#fluid-text": "./app/fluid-text/index.jsx",
+    "#hooks": "./app/hooks/index.js"
+  }
+}

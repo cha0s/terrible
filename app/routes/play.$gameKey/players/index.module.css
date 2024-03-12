@@ -1,0 +1,52 @@
+.players-space-container {
+  background-color: #222222;
+  font-family: Caladea, 'Times New Roman', Times, serif;
+  font-size: 3vw;
+  @media(min-width: 50em) {
+    font-size: 2vw;
+  }
+  height: 100%;
+  max-width: 100%;
+  opacity: 0.95;
+  position: absolute;
+  left: -100vw;
+  transition: left 0.1s;
+  top: calc(6rem - 1px);
+  width: 100%;
+  z-index: 10;
+}
+
+.players-space-container.opened {
+  left: 0;
+}
+
+@media(min-width: 80em) {
+  .players-space-container {
+    font-size: 1vw;
+    left: auto;
+    right: 0;
+    top: 0;
+    width: 40vw;
+
+    &.opened {
+      left: auto;
+    }
+  }
+}
+
+.players-space {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 6rem);
+  @media(min-width: 80em) {
+    height: 100vh;
+  }
+  width: 100%;
+}
+
+@media(min-width: 64em) {
+  .players-space {
+    float: left;
+    position: static;
+  }
+}

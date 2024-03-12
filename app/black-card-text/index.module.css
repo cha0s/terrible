@@ -1,0 +1,27 @@
+.black-card-text {
+  font-size: 3vh;
+  > div {
+    hyphens: auto;
+    text-align: left;
+  }
+}
+
+.answer {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.125em;
+  &.blank {
+    font-family: arial;
+  }
+}
+
+.footer {
+  margin-top: 1em;
+}
+
+.number {
+  font-family: caladea;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.85em;
+}

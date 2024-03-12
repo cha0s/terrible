@@ -1,0 +1,39 @@
+.paused {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.paused form {
+  line-height: normal;
+}
+
+.message {
+  height: 100%;
+  padding: 2vh 8vw;
+  width: 100%;
+}
+
+.half {
+  height: 50%;
+}
+
+.label {
+  height: 40%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  margin: 2vh 0;
+  button {
+    background: #222;
+    border: 1px solid #777;
+    color: #fa873a;
+    padding: 0.5em;
+    font-size: 2em;
+  }
+}
+

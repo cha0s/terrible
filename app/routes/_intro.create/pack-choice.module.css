@@ -1,0 +1,71 @@
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label {
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: normal;
+  padding-left: 1.75em;
+  position: relative;
+  white-space: inherit;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+.checkbox label::before{
+  border: 1px solid;
+  content: "";
+  height: 1.25em;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+}
+
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+.checkbox input[type="checkbox"]:checked + label {
+  color: #ffffcc;
+}
+.checkbox input[type="checkbox"]:checked + label::after {
+  animation: heartbeat 1s infinite;
+  color: #ff0000;
+  content: "💔";
+  left: calc(0.625em + 1px);
+  top: 1rem;
+  transform-origin: 0% 0%;
+}
+@keyframes heartbeat {
+  0% {
+    transform: rotate(0) scale(0.9) translate(-50%, -50%);
+  }
+  12% {
+    transform: rotate(-7deg) scale(0.7) translate(-50%, -50%);
+  }
+  25% {
+    transform: rotate(0) scale(0.8) translate(-50%, -50%);
+  }
+  37%, 50% {
+    transform: rotate(2deg) scale(0.7) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(0) scale(0.9) translate(-50%, -50%);
+  }
+}
+
+.pack {
+  display: inline-block;
+  padding: 0.4em 1vw;
+}
+
+.pack label:hover {
+  color: #aaa;
+}
